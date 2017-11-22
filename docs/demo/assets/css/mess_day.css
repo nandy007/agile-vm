@@ -1,0 +1,76 @@
+@import url(comm.css);
+
+.menu_list li{
+    display: flex;
+    flex-direction: row;
+    padding:0px 12px;
+    margin: 10px 0px;
+    background: #fff;
+}
+.menu_list li > div:first-child img{
+    width: 100px;
+}
+.menu_list li > div:last-child{
+    flex:1;
+    padding-left:10px;
+    display: flex;
+    flex-direction: column;
+}
+.menu_list li > div:last-child > p{
+    flex:1;
+}
+.menu_list_info{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    line-height: 30px;
+}
+.menu_list_info span:first-child{
+    font-size: 16px;
+}
+.menu_list_info span:last-child{
+    display: inline;
+    font-size: 10px;
+    margin-left:3px;
+}
+.menu_list_desc{
+    flex: none !important;
+    font-size: 12px;
+    width:180px;
+    line-height: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: keep-all;
+    white-space: nowrap;
+}
+.menu_list_action{
+    display: flex;
+    align-items: center;
+}
+.menu_list_action > span{
+    font-size: 12px;
+}
+.menu_list_action span.button{
+    flex:none;
+    padding:0px 8px;
+    float:left;
+    height:26px;
+    line-height: 26px;
+}
+.menu_list_action i{
+    font-size: 14px;
+    width:14px;
+    height:14px;
+    margin-left: 4px;
+}
+.menu_list_action > span:last-child{
+    flex: 1;
+    text-align: right;
+}
+.menu_list_action > span:last-child *{
+    color:#535353;
+}
+
+.menu_list li > div:first-child{
+    position: relative;
+}

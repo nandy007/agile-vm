@@ -1,0 +1,36 @@
+{
+    "msg": "\u8bf7\u6c42\u83dc\u5355\u6210\u529f",
+    "ret": "0",
+    "data": [
+        {
+            "is_free": 0,
+            "num_available": "12",
+            "latitude": "33.3333",
+            "name": "\u660c\u5e73\u533a\u79fb\u52a8\u5927\u53a6\u505c\u8f66\u573a1",
+            "longitude": "111.1111",
+            "num_total": "358",
+            "id": "100001",
+            "opentime": "00:00-00:00"
+        },
+        {
+            "is_free": 0,
+            "num_available": "0",
+            "latitude": "35.3333",
+            "name": "\u660c\u5e73\u533a\u79fb\u52a8\u5927\u53a6\u505c\u8f66\u573a2",
+            "longitude": "112.1111",
+            "num_total": "222",
+            "id": "100001",
+            "opentime": "00:00-00:00"
+        },
+        {
+            "is_free": 0,
+            "num_available": "188",
+            "latitude": "34.3333",
+            "name": "\u660c\u5e73\u533a\u79fb\u52a8\u5927\u53a6\u505c\u8f66\u573a3",
+            "longitude": "112.1111",
+            "num_total": "358",
+            "id": "100001",
+            "opentime": "00:00-00:00"
+        }
+    ]
+}

@@ -1,0 +1,129 @@
+<!-- HTML5文件 -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+		<title>员工APP</title>
+		<link rel="stylesheet" href="assets/framework/agile/css/agile.layout.css">
+		<link rel="stylesheet" href="assets/framework/third/seedsui/plugin/seedsui/seedsui.min.css">
+        <link rel="stylesheet" href="assets/css/index.css">
+		<!-- mvvm框架，自带jquery -->
+        <script src="assets/framework/agilevm/agile.vm.browser.js"></script>
+        <script data-main="assets/js/app.js" data-entry="js/index" src="assets/framework/third/amd/require.js"></script>
+	</head>
+	<body>
+		<div id="section_container">
+			<section id="index_section" data-role="section" class="active">
+				<article data-role="article" id="index_article" data-scroll="verticle" class="active" style="top:0px;bottom:0px;">
+					<div class="scroller">
+						<div class="index_header">
+							<img src="http://img0.imgtn.bdimg.com/it/u=3822723771,4080132151&fm=200&gp=0.jpg">
+							<div class="weather_area">
+								<div><span class="weather_area_user showtips"><img v-bind:src="userinfo.avatar"></span><span v-text="userinfo.nikename"></span></div>
+								<div class="weather_area_info">
+									<span class="weather_city_cn">北京</span>
+									<span class="weather_city_py">BeiJing</span>
+									<div style="width:80%;">
+										<div class="weather_search_ipt">
+											<input prompt="搜索"/>
+											<span><i class="icon icon-search"></i><font>搜索</font></span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div id="index_tuijan" class="index_tuijan" data-scroll="horizontal" style="position:relative;width:100%;">
+							<div class="scroller">
+							<ul>
+								<li v-for="tuijianItem in tuijianArr">
+									<img v-bind:src="tuijianItem.cover">
+									<span v-text="tuijianItem.title"></span>
+									<div>
+										<span v-text="tuijianItem.desc"></span>
+										<span v-text="'赞 '+tuijianItem.good"></span>
+									</div>
+								</li>
+							</ul>
+							</div>
+						</div>
+
+						<ul class="main_menu" style="margin-bottom:20px;">
+							<li data-toggle="html" href="park.html">
+								<img src="assets/img/main/cwcx.png">
+								<span>车位查询</span>
+							</li>
+							<li data-toggle="html" href="mess.html">
+								<img src="assets/img/main/st.png">
+								<span>食堂</span>
+							</li>
+							<li data-toggle="html" href="dinner.html">
+								<img src="assets/img/main/wcyd.png">
+								<span>晚餐预订</span>
+							</li>
+							<li>
+								<img src="assets/img/main/xyfw.png">
+								<span>洗衣服务</span>
+							</li>
+				
+							<li>
+								<img src="assets/img/main/xcfw.png">
+								<span>洗车服务</span>
+							</li>
+							<li>
+								<img src="assets/img/main/xsc.png">
+								<span>小市场</span>
+							</li>
+							<li>
+								<img src="assets/img/main/myddc.png">
+								<span>满意度调查</span>
+							</li>
+			
+							
+							<li>
+								
+							</li>
+							<li>
+								
+							</li>
+						</ul>
+					</div>
+				</article>
+				
+				
+				
+				<!--<article data-role="article" id="msg_article" style="top:0px;bottom:54px;">
+					<div class="scroller">
+						这是消息
+					</div>
+				</article>
+				
+				<article data-role="article" id="me_article" style="top:0px;bottom:54px;">
+					<div class="scroller">
+						这是我的
+					</div>
+				</article>
+				
+				<footer>
+					<ul class="menubar">
+		                <li class="tab active" data-role="tab" href="#index_article" data-toggle="article">
+		                    <i class="icon icon-home"></i>
+		                    <label class="tab-label">首页</label>
+		                </li>
+		                <li class="tab" data-role="tab" href="#msg_article" data-toggle="article">
+		                    <i class="icon icon-chatdot"></i>
+		                    <label class="tab-label">消息</label>
+		                </li>
+		                <li class="tab" data-role="tab" href="#me_article" data-toggle="article">
+		                    <i class="icon icon-rdouser"></i>
+		                    <label class="tab-label">我的</label>
+		                </li>
+		            </ul>
+				</footer>-->
+				
+				
+			</section>
+		</div>
+	</body>
+</html>

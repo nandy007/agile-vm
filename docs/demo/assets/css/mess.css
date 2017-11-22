@@ -1,0 +1,63 @@
+@import url(comm.css);
+
+
+.mess_list li{
+    background: #fff;
+    margin:10px 12px;
+    border-radius: 8px;
+    padding-top:6px;
+    box-shadow: 0px 0px 10px #ccc;
+}
+.mess_list li > p{
+    padding: 2px 12px;
+}
+.mess_list_info{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+.mess_list_info > span:last-child{
+    flex:1;
+    text-align: right;
+}
+
+.mess_list_title{
+    font-size: 20px;
+}
+.mess_list_star{
+    font-size: 14px;
+    margin-left: 6px;
+}
+
+.mess_list_star i{
+    font-size: 14px;
+    display: inline;
+    color: #FCE051;
+}
+
+.mess_list_star i.icon-fav.full:before{
+    content : "\e958";
+}
+
+.mess_list_desc{
+    width:90%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: keep-all;
+    white-space: nowrap;
+}
+
+.mess_list_zan{
+    text-align: right;
+    padding-right:20px !important;
+    padding-bottom: 10px !important;
+}
+
+.mess_list_cover{
+    height:80px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background-size:100%;
+    background-repeat: no-repeat;
+}

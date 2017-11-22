@@ -1,0 +1,131 @@
+@import url(comm.css);
+
+.detail_header{
+    display: flex;
+    flex-direction: row;
+    padding:12px;
+    background: #fff;
+}
+.detail_header > div:first-child{
+    position: relative;
+}
+.detail_header > div:first-child img{
+    width: 100px;
+    border-radius: 6px;
+    box-shadow: 0px 0px 10px #ccc;
+}
+.detail_header > div:last-child{
+    flex:1;
+    padding-left:10px;
+    display: flex;
+    flex-direction: column;
+}
+.detail_header > div:last-child > p{
+    flex:1;
+}
+.menu_list_info{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    line-height: 30px;
+}
+.menu_list_info span:first-child{
+    font-size: 16px;
+}
+.menu_list_info span:last-child{
+    display: inline;
+    font-size: 10px;
+    margin-left:3px;
+}
+.menu_list_desc{
+    flex: none !important;
+    font-size: 12px;
+    width:180px;
+    line-height: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: keep-all;
+    white-space: nowrap;
+}
+.menu_list_action{
+    display: flex;
+    align-items: center;
+}
+.menu_list_action > span{
+    font-size: 12px;
+}
+.menu_list_action i{
+    font-size: 14px;
+    width:14px;
+    height:14px;
+    margin-left: 4px;
+}
+.menu_list_action > span:last-child{
+    flex: 1;
+    text-align: right;
+}
+.menu_list_action > span:last-child *{
+    color:#535353;
+}
+.menu_list_price{
+    font-size: 14px !important;
+    color:#f04040;
+}
+
+.pinglun_area{
+    background: #fff;
+    margin-top:10px;
+    padding:0px 10px;
+}
+
+.pinglun_area li{
+    border-bottom: 1px solid #eee;
+}
+
+.pinglun_title{
+    color:#4BC7C7;
+    font-size: 18px;
+    line-height: 40px;
+}
+
+.pinglun_list_info{
+    line-height: 40px;
+}
+.pinglun_list_info > span:first-child{
+    color:#FC8441;
+    font-size: 16px;
+}
+.pinglun_list_info > span:last-child{
+    color:#999;
+    font-size: 12px;
+    float: right;
+}
+
+.pinglun_list_action{
+    text-align: right;
+    line-height: 30px;
+}
+.pinglun_list_action > span{
+    margin-left:6px;
+}
+.pinglun_list_action > span:first-child{
+    float: left;
+    color: #5CCBCB;
+    margin-left: 0px;
+}
+.pinglun_list_action .icon{
+    font-size: 10px;
+    width:14px;
+    height: 14px;
+}
+
+.pinglun_list_more{
+    padding:4px 30px;
+}
+.pinglun_list_more p {
+    margin:4px 0px;
+}
+.pinglun_list_more_title{
+    color:#5CCBCB;
+}
+

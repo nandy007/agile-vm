@@ -1,0 +1,62 @@
+<!-- HTML5文件 -->
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<title>员工APP</title>
+	<link rel="stylesheet" href="assets/framework/agile/css/agile.layout.css">
+	<link rel="stylesheet" href="assets/framework/third/seedsui/plugin/seedsui/seedsui.min.css">
+	<link rel="stylesheet" href="assets/css/mess_day.css">
+	<!-- mvvm框架，自带jquery -->
+	<script src="assets/framework/agilevm/agile.vm.browser.js"></script>
+	<script data-main="assets/js/app.js" data-entry="js/mess_day" src="assets/framework/third/amd/require.js"></script>
+</head>
+
+<body>
+	<div id="section_container">
+		<section id="day_section" data-role="section" class="active">
+			<header>
+				<div class="titlebar">
+					<a class="left" data-toggle="back" href="#">
+		                <i class="icon icon-arrowleft"></i>
+		            </a>
+					<h1 class="text-center" v-text="title"></h1>
+					<a class="right title_action">
+		                <i class="icon icon-moreh-fill"></i>
+		            </a>
+				</div>
+			</header>
+			<article id="day_article" data-role="article" class="active comm_bg">
+				<div class="scroller">
+                    <ul class="menu_list">
+						<li v-for="menuItem in menuArr" data-toggle="html" href="mess_detail.html">
+							<div>
+								<img v-bind:src="menuItem.cover">
+								<div class="left45deg" v-html="menuItem.tagType">
+									
+								</div>	
+							</div>
+							<div>
+								<p class="menu_list_info">
+									<span v-text="menuItem.title"></span>
+									<span v-text="'供应时间：'+menuItem.time"></span>
+								</p>
+								<p class="menu_list_desc" v-text="menuItem.desc">
+									
+								</p>
+								<p class="menu_list_action">
+									<span class="button radius6">申请菜品</span>
+									<span><a><i class="icon icon-thumb"></i>点赞</a><a><i class="icon icon-chatdot"></i>评论</a></span>
+								</p>
+							</div>
+						</li>
+                    </ul>
+				</div>
+			</article>
+		</section>
+	</div>
+</body>
+
+</html>

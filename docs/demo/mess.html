@@ -1,0 +1,63 @@
+<!-- HTML5文件 -->
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<title>员工APP</title>
+	<link rel="stylesheet" href="assets/framework/agile/css/agile.layout.css">
+	<link rel="stylesheet" href="assets/framework/third/seedsui/plugin/seedsui/seedsui.min.css">
+	<link rel="stylesheet" href="assets/css/mess.css">
+	<!-- mvvm框架，自带jquery -->
+	<script src="assets/framework/agilevm/agile.vm.browser.js"></script>
+	<script data-main="assets/js/app.js" data-entry="js/mess" src="assets/framework/third/amd/require.js"></script>
+</head>
+
+<body>
+	<div id="section_container">
+		<section id="list_section" data-role="section" class="active">
+			<header>
+				<div class="titlebar">
+					<a class="left" data-toggle="back" href="#">
+		                <i class="icon icon-arrowleft"></i>
+		            </a>
+					<h1 class="text-center">食堂</h1>
+					<a class="right title_action">
+		                <i class="icon icon-moreh-fill"></i>
+		            </a>
+				</div>
+			</header>
+			<article id="list_article" data-role="article" class="active comm_bg">
+				<div class="scroller">
+                    <ul class="mess_list">
+                        <li v-for="messItem in messArr" v-filter="starFilter" data-toggle="html" v-bind:href="'mess_day.html?id='+messItem.id">
+                            <p class="mess_list_info">
+                                <span class="mess_list_title" v-text="messItem.title">
+                                    
+                                </span>
+                                <span class="mess_list_star" v-html="messItem.starText">
+                                    
+                                </span>
+                                <span>
+                                    <i class="icon icon-arrowright"></i>
+                                </span>
+                            </p>
+                            <p class="mess_list_desc" v-text="messItem.desc">
+                                
+                            </p>
+                            <p class="mess_list_zan" v-text="'赞'+messItem.zan">
+                                
+                            </p>
+                            <p class="mess_list_cover" v-style="{'backgroundImage':'url('+messItem.cover+')'}">
+                                
+                            </p>
+                        </li>
+                    </ul>
+				</div>
+			</article>
+		</section>
+	</div>
+</body>
+
+</html>

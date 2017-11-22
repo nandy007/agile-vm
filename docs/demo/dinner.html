@@ -1,0 +1,143 @@
+<!-- HTML5文件 -->
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<title>员工APP</title>
+	<link rel="stylesheet" href="assets/framework/agile/css/agile.layout.css">
+	<link rel="stylesheet" href="assets/framework/third/seedsui/plugin/seedsui/seedsui.min.css">
+	<link rel="stylesheet" href="assets/css/dinner.css">
+	<!-- mvvm框架，自带jquery -->
+	<script src="assets/framework/agilevm/agile.vm.browser.js"></script>
+	<script data-main="assets/js/app.js" data-entry="js/dinner" src="assets/framework/third/amd/require.js"></script>
+</head>
+
+<body>
+	<div id="section_container">
+		<section id="order_section" data-role="section" class="active">
+			<header>
+				<div class="titlebar">
+					<a class="left" data-toggle="back" href="#">
+		                <i class="icon icon-arrowleft"></i>
+		            </a>
+					<h1 class="text-center">晚餐预订</h1>
+					<a class="right title_action" data-toggle="section" href="#box_section">
+		                <i class="icon icon-notepad"></i>
+		            </a>
+				</div>
+			</header>
+			<article id="order_article" data-role="article" class="active" style="bottom:50px;">
+				<div class="scroller">
+					<ul>
+						<li class="order_item" v-for="orderItem in orderArr" data-toggle="section" v-bind:href="'detail_section.html?id='+orderItem.id">
+							<div class="order_item_cover">
+								<img v-bind:src="orderItem.cover">
+							</div>
+							<div class="order_item_info">
+								<span v-text="orderItem.title"></span>
+								<span v-text="'月售'+orderItem.sale+' 赞'+orderItem.zan"></span>
+								<span v-text="'￥'+orderItem.price+orderItem.unit"></span>
+							</div>
+							<div class="order_item_action">
+								<span><i class="icon icon-rdocancel c-gray"></i></span>
+								<input type="text" class="order_item_num" v-model="orderItem.buy" />
+								<span><i class="icon icon-rdoadd-fill c-green"></i></span>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</article>
+		</section>
+		<section data-role="section" id="detail_section">
+			<header>
+				<div class="titlebar">
+					<a class="left" data-toggle="back" href="#">
+		                <i class="icon icon-arrowleft"></i>
+		            </a>
+					<h1 class="text-center">菜品详情</h1>
+					<a class="right title_action">
+		                <i class="icon icon-share"></i>
+		            </a>
+				</div>
+			</header>
+			<article data-role="article" id="detail_article" class="active" style="bottom:50px;">
+				<div class="scroller">
+					<img class="cover_big" src="assets/img/main/mess_temp.jpg">
+					<ul>
+						<li class="detail_title">
+							<span v-text="detail.title">烤鸭</span>
+						</li>
+						<li>
+							<span v-text="'月售'+detail.sale+' 赞'+detail.zan"></span>
+						</li>
+						<li class="detail_action">
+							<span v-text="'￥'+detail.price+detail.unit"></span>
+							<button class="radius8">加入餐盒</button>
+						</li>
+						<li class="detail_split">
+							<span></span>
+							<span>菜品信息</span>
+						</li>
+						<li v-text="detail.desc">
+							烤鸭 赠送热汤+米饭
+						</li>
+					</ul>
+				</div>
+			</article>
+		</section>
+		<section id="box_section" data-role="section">
+			<header>
+				<div class="titlebar">
+					<a class="left" data-toggle="back" href="#">
+		            <i class="icon icon-arrowleft"></i>
+					</a>
+						<h1 class="text-center">我的餐盒</h1>
+						<a class="right title_action">
+						<i class="icon icon-share"></i>
+					</a>
+				</div>
+			</header>
+			<article data-role="article" id="box_article" class="active" style="bottom:0px;">
+				<div class="scroller">
+					<ul class="box_list">
+						<li class="box_header">
+							<span></span>
+							<span>已选菜品</span>
+							<span v-on:click="clearBox"><i class="icon icon-trash"></i>清空我的餐盒</span>
+						</li>
+						<li class="box_item" v-for="boxItem in orderArr" v-if="boxItem.buy>0">
+							<span v-text="boxItem.title">烤鸭</span>
+							<span class="box_item_price" v-text="'￥'+boxItem.price">￥19</span>
+							<span><i class="icon icon-rdocancel c-gray"></i></span>
+							<input type="text" class="order_item_num" v-model="boxItem.buy"/>
+							<span><i class="icon icon-rdoadd-fill c-green"></i></span>
+						</li>
+					</ul>
+				</div>
+			</article>
+		</section>
+		<div class="total_action">
+			<footer>
+				<div class="total_area">
+					<ul>
+						<li class="order_num">
+							<img src="assets/img/main/lanuchbox.png">
+							<span>2</span>
+						</li>
+						<li class="order_price">
+							<span>我的餐盒</span>
+							<span>￥55</span>
+						</li>
+					</ul>
+				</div>
+				<div>
+					提交预订
+				</div>
+			</footer>
+		</div>
+	</div>
+</body>
+
+</html>

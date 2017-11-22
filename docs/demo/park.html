@@ -1,0 +1,79 @@
+<!-- HTML5文件 -->
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<title>员工APP</title>
+	<link rel="stylesheet" href="assets/framework/agile/css/agile.layout.css">
+	<link rel="stylesheet" href="assets/framework/third/seedsui/plugin/seedsui/seedsui.min.css">
+	<link rel="stylesheet" href="assets/css/park.css">
+	<!-- mvvm框架，自带jquery -->
+	<script src="assets/framework/agilevm/agile.vm.browser.js"></script>
+	<script data-main="assets/js/app.js" data-entry="js/park" src="assets/framework/third/amd/require.js"></script>
+</head>
+
+<body>
+	<div id="section_container">
+		<section id="search_section" data-role="section" class="active">
+			<header>
+				<div class="titlebar">
+					<a class="left" data-toggle="back" href="#">
+		                <i class="icon icon-arrowleft"></i>
+		            </a>
+					<h1 class="text-center">车位查询</h1>
+					<a class="right title_action" v-on:click="doSearch">
+		                <i class="icon icon-position"></i>
+		            </a>
+				</div>
+			</header>
+			<article id="search_article" data-role="article" class="active">
+				<div class="scroller">
+					<div style="padding:16px 10px;" class="search_area_bg">
+						<div class="input-box">
+							<i class="color-placeholder icon icon-search"></i>
+							<input type="text" placeholder="请输入停车场名称或地址" v-model="seachValue" v-on:change="doSearch" class="search">
+						</div>
+					</div>
+					<div>
+						<ul class="search_list">
+							<li style="line-height:40px;" v-text="searchInfo">
+
+							</li>
+							<li v-for="searchItem in searchArr" v-filter="searchArrFilter" v-on:click="showDetail($index)">
+								<span class="search_list_title" v-text="searchItem.name"></span>
+								<span class="search_list_distance" v-text="searchItem.distance+'km'"></span>
+								<p v-html="showSearchTips($index)"></p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</article>
+		</section>
+		<section id="detail_section" data-role="section">
+			<article data-role="article" id="detail_article" class="active" style="top:0px;bottom:0px;">
+				<div class="scroller">
+					<div class="bi_area">
+						<div id="bi_canvas" style="width: 100%;height:260px;"></div>
+					</div>
+
+					<div class="park_list">
+						<p class="park_list_title">各楼层车位情况</p>
+						<ul>
+							<li class="park_list_item" v-for="parkItem in parks" v-on:click="parkShowDetail">
+								<span class="park_list_blank"></span>
+								<span class="park_list_c" v-text="parkItem.floor"></span>
+								<span class="park_list_t" v-text="'已停'+parkItem.num_unavailable"></span>
+								<span class="park_list_k" v-text="'空位'+parkItem.num_available"></span>
+								<span class="park_list_desc" v-text="parkItem.remark"></span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</article>
+		</section>
+	</div>
+</body>
+
+</html>

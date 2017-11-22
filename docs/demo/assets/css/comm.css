@@ -1,0 +1,36 @@
+.comm_bg{
+    background-color: #eeeeee !important;
+}
+.titlebar{
+   background:  #4bc7c7;
+}
+.titlebar *{
+    color:#fff !important;
+}
+
+.left45deg{
+    display: block;
+    position: absolute;
+    left:0px;
+    top:0px;
+    width:60px;
+    height: 60px;
+    overflow: hidden;
+}
+.left45deg span{
+    display: block;
+    font-size: 10px;
+    line-height: 16px;
+    transform: translate(-36px, 4px) rotate(315deg);
+    width:100px;
+    text-align: center;
+    color: #fff;
+}
+
+.menu_tuijian{
+    background:#4BC7C7;
+}
+
+.menu_renqi{
+    background:#FE8080;
+}

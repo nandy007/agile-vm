@@ -1,0 +1,119 @@
+<!-- HTML5文件 -->
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<title>员工APP</title>
+	<link rel="stylesheet" href="assets/framework/agile/css/agile.layout.css">
+	<link rel="stylesheet" href="assets/framework/third/seedsui/plugin/seedsui/seedsui.min.css">
+	<link rel="stylesheet" href="assets/css/mess_detail.css">
+	<!-- mvvm框架，自带jquery -->
+	<script src="assets/framework/agilevm/agile.vm.browser.js"></script>
+	<script data-main="assets/js/app.js" data-entry="js/mess_detail" src="assets/framework/third/amd/require.js"></script>
+</head>
+
+<body>
+	<div id="section_container">
+		<section id="detail_section" data-role="section" class="active">
+			<header>
+				<div class="titlebar">
+					<a class="left" data-toggle="back" href="#">
+		                <i class="icon icon-arrowleft"></i>
+		            </a>
+					<h1 class="text-center">菜品详情</h1>
+					<a class="right title_action">
+		                <i class="icon icon-moreh-fill"></i>
+		            </a>
+				</div>
+			</header>
+			<article id="detail_article" data-role="article" class="active comm_bg">
+				<div class="scroller">
+					<div class="detail_header">
+						<div>
+							<img v-bind:src="cover">
+							<div class="left45deg" v-html="tagType">
+								
+							</div>
+						</div>
+						<div>
+							<p class="menu_list_info">
+								<span v-text="title"></span>
+								<span v-text="'供应时间：'+time"></span>
+							</p>
+							<p class="menu_list_desc" v-text="desc">
+
+							</p>
+							<p class="menu_list_action">
+								<span class="menu_list_price" v-text="price"></span>
+								<span><a><i class="icon icon-thumb"></i><font v-text="zan"></font></a><a><i class="icon icon-chatdot"></i>评论</a></span>
+							</p>
+						</div>
+					</div>
+
+					<ul class="pinglun_area">
+						<li class="pinglun_title">
+							全部评论
+						</li>
+
+						<li>
+							<p class="pinglun_list_info">
+								<span>爱吃吃不胖</span>
+								<span>12分钟前</span>
+							</p>
+							<p class="pinglun_list_content">
+								每周都会来买一次，都是老客户的了。每周都会来买一次，都是老客户的了。每周都会来买一次，都是老客户的了。每周都会来买一次，都是老客户的了
+							</p>
+							<p class="pinglun_list_action">
+								<span>查看全部<i class="icon icon-arrowdown"></i></span>
+								<span>赞 24</span>
+								<span>评论 6</span>
+							</p>
+						</li>
+
+						<li>
+							<p class="pinglun_list_info">
+								<span>爱吃吃不胖</span>
+								<span>12分钟前</span>
+							</p>
+							<p class="pinglun_list_content">
+								每周都会来买一次，都是老客户的了。每周都会来买一次，都是老客户的了。每周都会来买一次，都是老客户的了。每周都会来买一次，都是老客户的了
+							</p>
+							<p class="pinglun_list_action">
+								<span>收起<i class="icon icon-arrowup"></i></span>
+								<span>赞 24</span>
+								<span>评论 6</span>
+							</p>
+							<div class="pinglun_list_more">
+								<p>
+									<font class="pinglun_list_more_title">小小吃货</font>：<font>我也经常去买呢，确实不错啊</font>
+								</p>
+								<p>
+									<font class="pinglun_list_more_title">爱吃不胖</font>回复<font class="pinglun_list_more_title">小小吃货</font>：<font>哈哈哈哈</font>
+								</p>
+							</div>
+						</li>
+
+						<li>
+							<p class="pinglun_list_info">
+								<span>爱吃吃不胖</span>
+								<span>12分钟前</span>
+							</p>
+							<p class="pinglun_list_content">
+								每周都会来买一次，都是老客户的了。每周都会来买一次，都是老客户的了。每周都会来买一次，都是老客户的了。每周都会来买一次，都是老客户的了
+							</p>
+							<p class="pinglun_list_action">
+								<span>查看全部<i class="icon icon-arrowdown"></i></span>
+								<span>赞 24</span>
+								<span>评论 6</span>
+							</p>
+						</li>
+					</ul>
+				</div>
+			</article>
+		</section>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+{
+    "data": [
+        {
+            "num_chong": "4",
+            "floor": "B4",
+            "num_available": "100",
+            "remark": "\u672c\u5c42\u6709\u8d85\u5bbd\u8f66\u4f4d2\u4e2a",
+            "num_unavailable": "123",
+            "num_kuan": "2"
+        },
+        {
+            "num_chong": "0",
+            "floor": "B3",
+            "num_available": "111",
+            "remark": "",
+            "num_unavailable": "222",
+            "num_kuan": "1"
+        },
+        {
+            "num_chong": "0",
+            "floor": "B2",
+            "num_available": "200",
+            "remark": "",
+            "num_unavailable": "100",
+            "num_kuan": "3"
+        },
+        {
+            "num_chong": "3",
+            "floor": "B1",
+            "num_available": "100",
+            "remark": "",
+            "num_unavailable": "300",
+            "num_kuan": "0"
+        }
+    ],
+    "msg": "\u8bf7\u6c42\u6210\u529f",
+    "ret": "0"
+}

@@ -1,0 +1,26 @@
+{
+    "contains": [
+        {
+            "group": "入门基础",
+            "contains": [
+                {
+                    "subject": "下载和使用",
+                    "mdlink": "getting-started"
+                }
+            ]
+        },
+        {
+            "group": "API",
+            "contains": [
+                {
+                    "subject": "Parser类",
+                    "mdlink": "api-parser"
+                },
+                {
+                    "subject": "特殊用法",
+                    "mdlink": "special-uses"
+                }
+            ]
+        }
+    ]
+}
