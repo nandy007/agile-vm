@@ -1,0 +1,25 @@
+{
+  "name": "agile-vm",
+  "version": "0.1.6",
+  "description": "agile vm",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nandy007/agile-vm.git"
+  },
+  "keywords": [
+    "mvvm"
+  ],
+  "author": "nandy007",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nandy007/agile-vm/issues"
+  },
+  "homepage": "https://github.com/nandy007/agile-vm#readme"
+}
